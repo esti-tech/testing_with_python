@@ -1,9 +1,9 @@
-"""
-You’re designing a gate access system. Access is granted only if:
 
-The user is verified (verified == True)
+a = input("Enter True or False for A: ") == "True"
+b = input("Enter True or False for B: ") == "True"
 
-The user has an even ID (id & 1 == 0)
 
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+print("A and B:", a and b)
+print("A or B:", a or b)
+print("not A:", not a)
+print("A xor B:", a != b)
