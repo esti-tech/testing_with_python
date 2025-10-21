@@ -1,2 +1,2 @@
-print("Datatype & I/O Exercises")
-# Practice input/output and type conversions here.
+name = input("What's your name? ")
+print("Hello, " + name + "!")
