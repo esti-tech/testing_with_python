@@ -1,1 +1,11 @@
-# your code here
+#problem 1
+name= input(" What is your name? ")
+favorite_food= input(" What is your favorite food? ")
+current_year= input(" What is the current year? ")
+age= input(" How old are you?")
+birth_year=int( current_year)-int(age)
+print ("birth year is, " + str(birth_year))
+print(f"\n Hello {name} !")
+print(f"Wellcom! It is so nice to meet you!")
+print(f"I hear {favorite_food} is absolutely delicious - great choice!")
+print(f"Here is to an amazing year ahead in {current_year}, {name}!")
