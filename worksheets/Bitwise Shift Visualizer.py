@@ -1,7 +1,10 @@
-"""
-Input an integer and number of shift positions.
 
-Show results of left shift and right shift.
+num = int(input("Enter a number: "))
+shift = int(input("Enter how many bits to shift: "))
 
-Print the binary form before and after.
-"""
+left_shift = num << shift
+right_shift = num >> shift
+
+print("Original number:", num)
+print("After left shift:", left_shift)
+print("After right shift:", right_shift)
