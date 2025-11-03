@@ -1,24 +1,51 @@
+"""
+Problem 2: Ribbon Length
+---------------------------
+Given the dimensions of a box (LxWxH),
+calculate how much ribbon is needed.
+
+Formula:
+ribbon = smallest_perimeter + volume
+"""
+
 def parse_dimensions(box: str) -> tuple[int, int, int]:
+    """
+    Converts a string like '2x3x4' into three integers (l, w, h).
+    """
     l, w, h = box.split("x")
     return int(l), int(w), int(h)
 
-def surface_area(l: int, w: int, h: int) -> int:
-    return 2*l*w + 2*w*h + 2*h*l
+def smallest_perimeter(l: int, w: int, h: int) -> int:
+    """
+    Returns the smallest perimeter of any face.
+    Perimeter of a face = 2*(sum of smallest two sides)
+    """
+    sides = sorted([l, w, h])
+    return 2 * (sides[0] + sides[1])
 
-def smallest_side_area(l: int, w: int, h: int) -> int:
-    return min(l*w, w*h, h*l)
+def box_volume(l: int, w: int, h: int) -> int:
+    """
+    Returns the volume of the box.
+    """
+    return l * w * h
 
-def paper_for_box(l: int, w: int, h: int) -> int:
-    return surface_area(l, w, h) + smallest_side_area(l, w, h)
+def ribbon_for_box(l: int, w: int, h: int) -> int:
+    """
+    Returns total ribbon for one box:
+    ribbon = smallest perimeter + volume
+    """
+    return smallest_perimeter(l, w, h) + box_volume(l, w, h)
 
-def total_paper_needed(boxes: str) -> int:
+def total_ribbon_needed(boxes: str) -> int:
+    """
+    Calculates total ribbon for all boxes.
+    """
     total = 0
-    # Clean the input: split lines, strip spaces, ignore empty lines
-    box_list = [b.strip() for b in boxes.replace("\n", " ").split() if b.strip()]
-    for box in box_list:
+    for box in boxes.split():
         l, w, h = parse_dimensions(box)
-        total += paper_for_box(l, w, h)
+        total += ribbon_for_box(l, w, h)
     return total
+
 
 # --- Main Program ---
 if __name__ == "__main__":
@@ -1022,5 +1049,5 @@ if __name__ == "__main__":
 3x2x22
 14x3x5
 10x9x8"""
-    total = total_paper_needed(boxes)
-    print("Total wrapping paper needed:", total)
+    total = total_ribbon_needed(boxes)
+    print("Total ribbon needed:", total)
