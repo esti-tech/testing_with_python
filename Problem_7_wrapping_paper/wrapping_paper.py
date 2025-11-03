@@ -1,60 +1,29 @@
-"""
-Problem 1: Wrapping Paper
-----------------------------
-Given the dimensions of a box (LxWxH),
-calculate how much wrapping paper is needed.
-
-Formula:
-total = 2*l*w + 2*w*h + 2*h*l + smallest_side_area
-"""
-
 def parse_dimensions(box: str) -> tuple[int, int, int]:
-    """
-    Converts a string like '2x3x4' into three integers (l, w, h).
-    DONE by Instructor
-    """
-    l,w,h = box.split("x")
+    l, w, h = box.split("x")
     return int(l), int(w), int(h)
 
-
 def surface_area(l: int, w: int, h: int) -> int:
-    """
-    Returns the surface area
-    """
-    pass
-
+    return 2*l*w + 2*w*h + 2*h*l
 
 def smallest_side_area(l: int, w: int, h: int) -> int:
-    """
-    Returns the area of the smallest side.
-    """
-    pass
-
-
+    return min(l*w, w*h, h*l)
 
 def paper_for_box(l: int, w: int, h: int) -> int:
-    """
-    Returns total wrapping paper for one box.
-    """
-    pass
-
+    return surface_area(l, w, h) + smallest_side_area(l, w, h)
 
 def total_paper_needed(boxes: str) -> int:
-    """
-    Calculates total wrapping paper for all boxes.
-    Input format: '2x3x4 1x1x10'
-    """
     total = 0
-    for box in boxes.split():
+    # Clean the input: split lines, strip spaces, ignore empty lines
+    box_list = [b.strip() for b in boxes.replace("\n", " ").split() if b.strip()]
+    for box in box_list:
         l, w, h = parse_dimensions(box)
         total += paper_for_box(l, w, h)
     return total
 
-
 # --- Main Program ---
 if __name__ == "__main__":
-    boxes ="""29x13x26
-11x11x14
+    boxes = """29x13x26
+    11x11x14
 27x2x5
 6x10x13
 15x19x10
