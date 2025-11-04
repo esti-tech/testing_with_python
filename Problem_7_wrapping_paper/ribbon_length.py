@@ -19,21 +19,25 @@ def smallest_perimeter(l: int, w: int, h: int) -> int:
     """
     Returns the smallest perimeter of any face.
     """
-    pass
+    
+    perim1 = 2*(l+w)
+    perim2 = 2*(w+h)
+    perim3 = 2*(l+h)
+    return min (perim1,perim2,perim3)
 
 
 def box_volume(l: int, w: int, h: int) -> int:
     """
     Returns the volume of the box.
     """
-    pass
+    return l*w*h
 
 
 def ribbon_for_box(l: int, w: int, h: int) -> int:
     """
     Returns total ribbon for one box:
     """
-    pass
+    return smallest_perimeter(l,w,h) + box_volume(l,w,h)
 
 
 def total_ribbon_needed(boxes: str) -> int:
