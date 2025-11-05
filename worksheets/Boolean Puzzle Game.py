@@ -1,9 +1,17 @@
-"""
-You’re designing a gate access system. Access is granted only if:
+verified = True  
 
-The user is verified (verified == True)
+user_id = int(input("Enter your user ID: "))
+flags = int(input("Enter your security flags (as an integer): "))
 
-The user has an even ID (id & 1 == 0)
+if verified == True:           
+    if user_id & 1 == 0:       
+        if flags & 0b111 != 0: 
+            print("✅ Access granted")
+        else:
+            print("❌ Access denied")
+    else:
+        print("❌ Access denied")
+else:
+    print("❌ Access denied")
 
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+    
