@@ -1,9 +1,12 @@
-"""
-You’re designing a gate access system. Access is granted only if:
+def has_access(verified, user_id, flags):
+    return verified and (user_id & 1 == 0) and (flags & 0b111 != 0)
 
-The user is verified (verified == True)
 
-The user has an even ID (id & 1 == 0)
+verified = True
+user_id = 42
+flags = 4  
 
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+if has_access(verified, user_id, flags):
+    print("✅ Access Granted!")
+else:
+    print("❌ Access Denied.")
