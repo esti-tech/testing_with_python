@@ -19,7 +19,13 @@ def create_cart():
         4. If not found, add the product with the quantity.
         5. Return nothing.
         """
-        pass  # TODO: Implement add logic using the steps above
+        if quantity <= 0:
+            print("Warning: Quantity must be positive.")
+            return
+        for i, (p, q) in enumerate(cart_items):
+            if p == product:
+                cart_items[i] = (p, q + quantity)
+                return
 
     def remove_item(product, quantity=1):
         """
@@ -32,7 +38,14 @@ def create_cart():
         4. If resulting quantity is 0 or less, remove the product entirely.
         5. Return nothing.
         """
-        pass  # TODO: Implement remove logic using the steps above
+        for i, (p, q) in enumerate(cart_items):
+            if p == product:
+                new_quantity = q - quantity
+                if new_quantity > 0:
+                    cart_items[i] = (p, new_quantity)
+                else:
+                    cart_items.pop(i)
+                return
 
     def get_items():
         """
@@ -42,7 +55,7 @@ def create_cart():
         1. Create and return a shallow copy of cart_items.
         2. This protects the cart data from being modified externally.
         """
-        pass  # TODO: Return a copy of cart_items
+        return cart_items.copy()
 
     return add_item, remove_item, get_items
 
