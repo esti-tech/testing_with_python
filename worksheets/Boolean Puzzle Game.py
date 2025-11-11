@@ -1,9 +1,19 @@
-"""
-You’re designing a gate access system. Access is granted only if:
+# Boolean Puzzle Game
 
-The user is verified (verified == True)
+print("Is the user verified?")
+print("1. True")
+print("0. False")
+verify=bool(int(input()))
 
-The user has an even ID (id & 1 == 0)
-
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+if verify == True:
+    id=int(input("Enter user ID: "))
+    if id & 1 == 0:
+        flag=int(input("Enter security flag bits in number: "))
+        if flag & 0b111 != 0:
+            print("Access Granted")
+        else:
+            print("Access Denied: Security flag bits do not meet the criteria.")
+    else:
+        print("Access Denied: User ID is not even.")
+else:
+    print("Access Denied: User is not verified.")
