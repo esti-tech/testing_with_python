@@ -1,9 +1,8 @@
-"""
-You’re designing a gate access system. Access is granted only if:
-
-The user is verified (verified == True)
-
-The user has an even ID (id & 1 == 0)
-
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+A = input("Is it raining? (yes/no): ").lower() == "yes"
+B = input("Do you have an umbrella? (yes/no): ").lower() == "yes"
+if A and not B:
+    print("You will get wet!")
+elif A and B:
+    print("You are safe from the rain.")
+else:
+    print("Enjoy your day!")

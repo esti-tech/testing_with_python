@@ -1,2 +1,5 @@
 print("Datatype & I/O Exercises")
-# Practice input/output and type conversions here.
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+height = float(input("Enter your height (in meters): "))
+print(f"Hello {name}! You are {age} years old and {height}m tall.")

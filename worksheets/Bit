@@ -1,0 +1,8 @@
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter a bit mask: "))
+and_result = num1 & num2
+or_result = num1 | num2
+xor_result = num1 ^ num2
+print(f"{num1} & {num2} = {and_result}")
+print(f"{num1} | {num2} = {or_result}")
+print(f"{num1} ^ {num2} = {xor_result}")
