@@ -1,4 +1,3 @@
-# your code here
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 print("Choose operation: +, -, *, /")
@@ -18,5 +17,6 @@ elif operation == "/":
     else:
         result = num1 / num2
         print("Result:", result)
+
 else:
     print("Invalid operation! Please enter +, -, * or /.")
