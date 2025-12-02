@@ -12,28 +12,31 @@ def parse_dimensions(box: str) -> tuple[int, int, int]:
     """
     Converts a string like '2x3x4' into three integers (l, w, h).
     """
-    l,w,h = box.split("x")
+    l, w, h = box.split("x")
     return int(l), int(w), int(h)
+
 
 def smallest_perimeter(l: int, w: int, h: int) -> int:
     """
     Returns the smallest perimeter of any face.
     """
-    pass
+    sides = sorted([l, w, h])  # find the two smallest sides
+    return 2 * (sides[0] + sides[1])
 
 
 def box_volume(l: int, w: int, h: int) -> int:
     """
     Returns the volume of the box.
     """
-    pass
+    return l * w * h
 
 
 def ribbon_for_box(l: int, w: int, h: int) -> int:
     """
     Returns total ribbon for one box:
+    smallest perimeter + volume
     """
-    pass
+    return smallest_perimeter(l, w, h) + box_volume(l, w, h)
 
 
 def total_ribbon_needed(boxes: str) -> int:
@@ -49,7 +52,7 @@ def total_ribbon_needed(boxes: str) -> int:
 
 # --- Main Program ---
 if __name__ == "__main__":
-    boxes ="""29x13x26
+    boxes = """29x13x26
 11x11x14
 27x2x5
 6x10x13
