@@ -1,0 +1,35 @@
+# --- DBU Faculty and Staff ---
+abera.kebede@dbu.edu.et
+tigist.wolde@dbu.edu.et
+alemayehu.tesfa@dbu.edu.et
+yared.mengistu@dbu.edu.et
+zenebe.gebre@dbu.edu.et
+mesfin.haile@dbu.edu.et
+solomon.asrat@dbu.edu.et
+hiwot.tadesse@dbu.edu.et
+getnet.shiferaw@dbu.edu.et
+chala.tolosa@dbu.edu.et
+
+# --- DBU Department and Official Mailboxes ---
+registrar@dbu.edu.et
+admissions@dbu.edu.et
+library@dbu.edu.et
+it.support@dbu.edu.et
+finance@dbu.edu.et
+hr.office@dbu.edu.et
+research@dbu.edu.et
+academic.vp@dbu.edu.et
+president@dbu.edu.et
+student.affairs@dbu.edu.et
+
+# --- DBU Student Accounts (Common Format: first.lastXX@dbu.edu.et) ---
+selam.dinsa01@dbu.edu.et
+dawit.belay03@dbu.edu.et
+eleni.negash05@dbu.edu.et
+fitsum.mamo07@dbu.edu.et
+genet.ayele09@dbu.edu.et
+hagos.birhanu11@dbu.edu.et
+israel.teshome13@dbu.edu.et
+kalkidan.getu15@dbu.edu.et
+leul.mekonnen17@dbu.edu.et
+meron.tola19@dbu.edu.et
