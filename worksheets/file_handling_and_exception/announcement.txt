@@ -1,0 +1,28 @@
+### Date: 2025-12-03
+Subject: Mandatory Security Training Reminder
+* Action Required: All employees must complete the 2025 Annual Cybersecurity Training by **Friday, December 6th**.
+* Access: The training link was sent via email yesterday from "IT Security."
+* Note: Failure to complete the training by the deadline will result in temporary account lockouts. Please contact the IT Helpdesk if you have issues logging in.
+
+---
+
+### Date: 2025-12-03
+Subject: Cafeteria Menu Change - Today Only
+* Due to a supply issue, the lunch special today will be **Chicken Stir-fry** instead of the planned Pasta Primavera.
+* Vegetarian options (Garden Salad bar) are available as usual.
+* We apologize for the inconvenience!
+
+---
+
+### Date: 2025-12-03
+Subject: Reminder: Quarterly All-Hands Meeting
+* The next All-Hands Company Meeting is scheduled for **Thursday, December 12th, at 10:00 AM** in the main Auditorium (Room 101).
+* Please submit any questions for the Q&A session to **InternalComms@company.com** by end of day, December 9th.
+* Remote employees: A Zoom link will be shared 24 hours prior to the meeting.
+
+---
+
+### Date: 2025-12-02 (Archived)
+Subject: Server Maintenance Complete
+* The planned server maintenance for the HR portal was successfully completed last night.
+* All related systems are back online and fully operational. Please report any lingering issues to the IT Helpdesk immediately.
