@@ -2,7 +2,9 @@ def move_floor(char: str) -> int:
     """
     Returns +1 if '(' else -1 if ')'.
     """
-    pass
+    if char == "(": return 1
+    elif char == ")": return -1
+    else: return 0
 
 
 def first_basement_position(instructions: str) -> int:
@@ -10,7 +12,12 @@ def first_basement_position(instructions: str) -> int:
     Returns the position where Santa first enters the basement.
     Returns -1 if never enters basement.
     """
-    pass
+    floor = 0
+    for i, f in enumerate(list(instructions)):
+        floor += move_floor(f)
+        if floor == -1: 
+            return i + 1
+    return -1
 
 
 # Main program
