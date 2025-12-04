@@ -5,3 +5,4 @@ Show results of left shift and right shift.
 
 Print the binary form before and after.
 """
+ 
