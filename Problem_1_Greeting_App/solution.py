@@ -1,1 +1,9 @@
-# your code here
+name = input("what is your name? ")
+print("Hello, " +name + "! Welcome here.")
+food = input("What is your favorite food "+ name + "? ")
+print(food + " is an amazing food!😋😋😋")
+current_year = input("what is the year, " + name + "? ")
+age = input ("how old are you "+name + "?") 
+age_of_user=int(age)
+birth_year= str(int(current_year) - age_of_user )
+print("you born in "+birth_year +".")
