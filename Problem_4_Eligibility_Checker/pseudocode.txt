@@ -1,3 +1,1 @@
-1. Get age and license status.
-2. Use nested if/else to check eligibility.
-3. Print result.
+

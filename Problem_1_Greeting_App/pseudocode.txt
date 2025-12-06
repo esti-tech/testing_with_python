@@ -1,3 +1,1 @@
-1. Get name, favorite food, year, and age.
-2. Print greeting.
-3. Calculate birth year (optional).
+
