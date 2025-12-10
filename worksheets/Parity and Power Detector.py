@@ -1,10 +1,10 @@
-"""
+num = int(input("enter a number:\n"))
+if num & 1 == 0:
+  print(f"the number {num} is an even number")
+else: print(f"the number {num} is an odd number")
+if num != 0:
+  if (num & (num - 1)) == 0:
+    print(f"the number {num} is power of two")
+  else: print(f"the number {num} is not power of two")
+else: print("0 is not power of two.")
 
-Input an integer.
-
-Print:
-
-Whether it’s even or odd using num & 1
-
-Whether it’s a power of two using (num & (num - 1)) == 0
-"""
