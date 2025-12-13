@@ -13,14 +13,14 @@ def move_floor(char: str) -> int:
     """
     Returns +1 if '(' else -1 if ')'.
     """
-    pass
+    return 1 if char == '(' else -1
 
 
 def final_floor(instructions: str) -> int:
     """
     Calculates the final floor Santa ends on.
     """
-    pass
+    return sum(move_floor(char) for char in instructions)
 
 
 # --- Main Program ---
