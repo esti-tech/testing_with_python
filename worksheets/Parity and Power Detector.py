@@ -1,10 +1,12 @@
-"""
+# Parity and Power of Two Detector
 
-Input an integer.
+number = int(input("Enter an integer: "))
+if number & 1 == 0:
+    print(f"{number} is even.")
+else:  
+    print(f"{number} is odd.")
 
-Print:
-
-Whether it’s even or odd using num & 1
-
-Whether it’s a power of two using (num & (num - 1)) == 0
-"""
+if number & (number - 1) == 0:
+    print(f"{number} is a power of two.")
+else:
+    print(f"{number} is not a power of two.")
