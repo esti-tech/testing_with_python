@@ -1,10 +1,17 @@
-"""
+# Parity and Power Detector.py
 
-Input an integer.
+print("Let’s find out if your number is even, odd, or a power of two!")
 
-Print:
+n = int(input(" any positive number: "))
 
-Whether it’s even or odd using num & 1
+if n % 2 == 0:
+    print(n, "is an even number.")
+else:
+    print(n, "is an odd number.")
 
-Whether it’s a power of two using (num & (num - 1)) == 0
-"""
+if n > 0 and (n & (n - 1)) == 0:
+    print("Wow! That’s a power of two ")
+else:
+    print("Nope, that’s not a power of two.")
+
+print("Done. That was easy, right?")
