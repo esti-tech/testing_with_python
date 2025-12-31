@@ -1,6 +1,6 @@
 print("Datatype & I/O Exercises")
 
-#to get user input and display meassage
+#to get user input and display message
 name=input("Enter your name: ")
 print(type(name))
 print("Hello " + name )
