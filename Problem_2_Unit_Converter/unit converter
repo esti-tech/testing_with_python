@@ -1,0 +1,105 @@
+# Very Simple Unit Converter
+
+print("Welcome to the Simple Unit Converter!")
+print("Choose conversion type:")
+print("1. Length (meters, centimeters, kilometers)")
+print("2. Weight (kilograms, grams, pounds)")
+print("3. Temperature (Celsius, Fahrenheit, Kelvin)")
+
+choice = input("Enter your choice (1/2/3): ")
+
+if choice == "1":
+    # Length conversion
+    value = float(input("Enter the value to convert: "))
+    from_unit = input("From unit (m, cm, km): ")
+    to_unit = input("To unit (m, cm, km): ")
+    
+    # Convert everything to meters first
+    if from_unit == "m":
+        value_in_m = value
+    elif from_unit == "cm":
+        value_in_m = value * 0.01
+    elif from_unit == "km":
+        value_in_m = value * 1000
+    else:
+        print("Invalid unit")
+        exit()
+    
+    # Convert meters to target unit
+    if to_unit == "m":
+        result = value_in_m
+    elif to_unit == "cm":
+        result = value_in_m / 0.01
+    elif to_unit == "km":
+        result = value_in_m / 1000
+    else:
+        print("Invalid unit")
+        exit()
+    
+    print(f"{value} {from_unit} = {result} {to_unit}")
+
+elif choice == "2":
+    # Weight conversion
+    value = float(input("Enter the value to convert: "))
+    from_unit = input("From unit (kg, g, lb): ")
+    to_unit = input("To unit (kg, g, lb): ")
+    
+    # Convert everything to kilograms first
+    if from_unit == "kg":
+        value_in_kg = value
+    elif from_unit == "g":
+        value_in_kg = value * 0.001
+    elif from_unit == "lb":
+        value_in_kg = value * 0.453592
+    else:
+        print("Invalid unit")
+        exit()
+    
+    # Convert kilograms to target unit
+    if to_unit == "kg":
+        result = value_in_kg
+    elif to_unit == "g":
+        result = value_in_kg / 0.001
+    elif to_unit == "lb":
+        result = value_in_kg / 0.453592
+    else:
+        print("Invalid unit")
+        exit()
+    
+    print(f"{value} {from_unit} = {result} {to_unit}")
+
+elif choice == "3":
+    # Temperature conversion
+    value = float(input("Enter the temperature to convert: "))
+    from_unit = input("From unit (C, F, K): ")
+    to_unit = input("To unit (C, F, K): ")
+    
+    if from_unit == "C":
+        if to_unit == "F":
+            result = (value * 9/5) + 32
+        elif to_unit == "K":
+            result = value + 273.15
+        else:
+            result = value
+    elif from_unit == "F":
+        if to_unit == "C":
+            result = (value - 32) * 5/9
+        elif to_unit == "K":
+            result = (value - 32) * 5/9 + 273.15
+        else:
+            result = value
+    elif from_unit == "K":
+        if to_unit == "C":
+            result = value - 273.15
+        elif to_unit == "F":
+            result = (value - 273.15) * 9/5 + 32
+        else:
+            result = value
+    else:
+        print("Invalid unit")
+        exit()
+    
+    print(f"{value}°{from_unit} = {result}°{to_unit}")
+
+else:
+    print("Invalid choice!")
