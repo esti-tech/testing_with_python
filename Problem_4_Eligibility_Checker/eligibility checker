@@ -1,0 +1,18 @@
+# Simple Human-Like Eligibility Checker
+
+print("Let's check if you can drive.")
+
+# Get user input
+age = int(input("Enter your age: "))
+has_license = input("Do you have a driving license? (yes/no): ").strip().lower()
+
+# Check eligibility
+if age >= 18:
+    if has_license == "yes":
+        print("You can drive.")
+    else:
+        print("You need a driving license to drive.")
+else:
+    print("You are too young to drive.")
+
+print("Thank you!")
