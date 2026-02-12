@@ -1,7 +1,15 @@
-"""
-Input an integer and number of shift positions.
+num = int(input("Enter an integer: "))
+shift = int(input("Enter number of shift positions: "))
 
-Show results of left shift and right shift.
+print(f"\nOriginal number: {num}")
+print(f"Binary form: {bin(num)}")
 
-Print the binary form before and after.
-"""
+# Left shift
+left_shifted = num << shift
+print(f"\nAfter left shift by {shift}: {left_shifted}")
+print(f"Binary form: {bin(left_shifted)}")
+
+# Right shift
+right_shifted = num >> shift
+print(f"\nAfter right shift by {shift}: {right_shifted}")
+print(f"Binary form: {bin(right_shifted)}")
