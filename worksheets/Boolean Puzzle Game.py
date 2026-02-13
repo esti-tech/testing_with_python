@@ -1,9 +1,11 @@
-"""
-You’re designing a gate access system. Access is granted only if:
-
-The user is verified (verified == True)
-
-The user has an even ID (id & 1 == 0)
-
-The security flag bits contain at least one 1 in the last 3 bits (flags & 0b111 != 0)
-"""
+verified=True
+user_id=1024
+flags=0b1010
+if not verified:
+     print("Access denied:user not verified")
+elif user_id&1!=0:
+     print("Access define: user id is not even")
+elif flags & 0b111==0:
+     print("Access denied:security flags don't meet requirements")
+else:
+     print("Access granted!")
