@@ -1,0 +1,19 @@
+# Greeting App
+
+print("Hi! Nice to meet you.")
+
+# 1. Get user input
+name = input("What's your name? ")
+favorite_food = input(f"Hi {name}, what's your favorite food? ")
+year = int(input("What year is it now? "))
+age = int(input(f"How old are you, {name}? "))
+
+# 2. Print a warm greeting
+print(f"\nIt's really nice to meet you, {name}. {favorite_food} sounds delicious!")
+
+# 3. Calculate birth year
+birth_year = year - age
+print(f"So you were born in {birth_year}. Time really goes by fast, doesn't it?")
+
+# 4. Closing message
+print(f"It was great talking to you, {name}. I hope you have a wonderful day!")
