@@ -1,0 +1,32 @@
+# Simple Calculator Project
+
+# 1. Input two numbers
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+# 2. Input operation
+print("Choose operation: +, -, *, /")
+operation = input("Enter operation: ")
+
+# 3 & 4. Perform calculation and handle division by zero
+if operation == "+":
+    result = num1 + num2
+    print("Result:", result)
+
+elif operation == "-":
+    result = num1 - num2
+    print("Result:", result)
+
+elif operation == "*":
+    result = num1 * num2
+    print("Result:", result)
+
+elif operation == "/":
+    if num2 == 0:
+        print("Error: Division by zero is not allowed!")
+    else:
+        result = num1 / num2
+        print("Result:", result)
+
+else:
+    print("Invalid operation!")
